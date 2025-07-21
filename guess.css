@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #f44336;
+}
+body {
+  margin: 0;
+  background-color: #eee;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  background-color: white;
+  font-size: 20px;
+}
+.guess-game {
+  margin: 20px auto;
+  width: 1000px;
+  text-align: center;
+  display: flex;
+  padding: 20px 20px 20px 40px;
+  align-items: flex-start;
+  gap: 20px;
+  .game {
+    .inputs {
+      > div {
+        margin-bottom: 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      span {
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: 15px;
+      }
+      input {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        border: none;
+        caret-color: var(--primary-color);
+        font-size: 35px;
+        text-align: center;
+        background-color: white;
+        border-bottom: 2px solid #333;
+        &:focus {
+          outline: none;
+        }
+        &.inspace {
+          background-color: #18ba89;
+          color: white;
+          border: #18ba89;
+        }
+        &.inspace-non {
+          background-color: #f89e13;
+          border: #f89e13;
+          color: white;
+        }
+        &.no {
+          background-color: #27303f;
+          border: #27303f;
+          color: white;
+        }
+      }
+      .disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    }
+    .controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      .check {
+        flex: 1;
+        background-color: var(--primary-color);
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .hint {
+        margin-left: 5px;
+        background-color: #118c67;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        padding: 10px 13px;
+        font-size: 17px;
+        font-weight: bold;
+        span {
+          margin-right: 5px;
+        }
+      }
+      :disabled {
+        background-color: black;
+        cursor: no-drop;
+        opacity: 0.4;
+      }
+    }
+  }
+  .key-color {
+    h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .color-line {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      border-radius: 6px;
+      padding: 0 10px;
+      margin-bottom: 6px;
+      .color {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin-right: 7px;
+        &.correct-in {
+          background-color: #18ba89;
+        }
+        &.correct-non {
+          background-color: #f89e13;
+        }
+        &.non {
+          background-color: #27303f;
+        }
+      }
+      .text {
+        font-size: 11px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+.message {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  span {
+    display: block;
+    font-weight: bold;
+    font-size: 35px;
+    text-transform: capitalize;
+    color: var(--primary-color);
+    margin-top: 7px;
+  }
+  p {
+    margin-top: 10px;
+  }
+}
+.again {
+  display: block;
+    margin: 15px auto;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+footer {
+  position: fixed;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  font-size: 13px;
+}

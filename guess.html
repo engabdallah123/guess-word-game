@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="guess.css" />
+    <title></title>
+  </head>
+  <body>
+    <h1></h1>
+    <div class="guess-game">
+      <div class="game">
+        <div class="inputs"></div>
+        <div class="controls">
+          <button class="check">Check Word</button>
+          <button class="hint"><span></span>Hint</button>
+        </div>
+        <div class="message">
+          <span></span>
+          <p></p>
+        </div>
+      </div>
+      <div class="key-color">
+        <h2>Key Colors</h2>
+        <div class="color-line">
+          <div class="color correct-in"></div>
+          <p class="text">Letter Is Correct And In Place</p>
+        </div>
+        <div class="color-line">
+          <div class="color correct-non"></div>
+          <p class="text">Letter Is Correct But Not In Place</p>
+        </div>
+        <div class="color-line">
+          <div class="color non"></div>
+          <p class="text">Letter Is Wrong</p>
+        </div>
+        <button class="again">Try Again</button>
+      </div>
+    </div>
+    <footer></footer>
+    <audio class="fail" src="cartoon-fail.mp3" preload="auto"></audio>
+    <audio class="suc" src="sucess-all.mp3" preload="auto"></audio>
+    <script src="guess.js"></script>
+  </body>
+</html>
